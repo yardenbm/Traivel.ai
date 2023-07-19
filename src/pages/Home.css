@@ -1,0 +1,15 @@
+ion-content {
+  --background: url('../images/road.jpg') no-repeat center center / cover;;
+
+  .form-input {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .response-section {
+    margin-top: 20px;
+    text-align: center;
+
+  }
+}
