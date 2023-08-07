@@ -16,6 +16,7 @@ app.all('*', (req, res, next) => {
 });
 
 app.post('/api/audio', async (req, res) => {
+    console.log('Incoming request body:', req.body);
     const { text, speaker } = req.body;
     const speakerToVoiceId = {
       'Justin': 'Justin',

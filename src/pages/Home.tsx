@@ -184,7 +184,7 @@ const Home: React.FC = () => {
       {!isValidPerson && <p style={{ color: 'red' }}>This field is required</p>}
     </div>
     <p></p>
-    <div className="ion-text-center2">
+    <div className="ion-text-center2" style={{color: 'black'}}>
       <PlacesAutocomplete
         value={location}
         onChange={handleLocationChange}
