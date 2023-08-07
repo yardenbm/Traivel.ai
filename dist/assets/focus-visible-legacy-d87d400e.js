@@ -1,0 +1,5 @@
+System.register([],(function(e,t){"use strict";return{execute:function(){
+/*!
+       * (C) Ionic http://ionicframework.com - MIT License
+       */
+var t="ion-focused",n=["Tab","ArrowDown","Space","Escape"," ","Shift","Enter","ArrowLeft","ArrowRight","ArrowUp","Home","End"];e("startFocusVisible",(function(e){var o=[],r=!0,s=e?e.shadowRoot:document,i=e||document.body,c=function(e){o.forEach((function(e){return e.classList.remove(t)})),e.forEach((function(e){return e.classList.add(t)})),o=e},u=function(){r=!1,c([])},a=function(e){(r=n.includes(e.key))||c([])},d=function(e){if(r&&void 0!==e.composedPath){var t=e.composedPath().filter((function(e){return!!e.classList&&e.classList.contains("ion-focusable")}));c(t)}},f=function(){s.activeElement===i&&c([])};return s.addEventListener("keydown",a),s.addEventListener("focusin",d),s.addEventListener("focusout",f),s.addEventListener("touchstart",u),s.addEventListener("mousedown",u),{destroy:function(){s.removeEventListener("keydown",a),s.removeEventListener("focusin",d),s.removeEventListener("focusout",f),s.removeEventListener("touchstart",u),s.removeEventListener("mousedown",u)},setFocus:c}}))}}}));

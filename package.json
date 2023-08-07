@@ -12,6 +12,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@awesome-cordova-plugins/camera": "^6.4.0",
+    "@awesome-cordova-plugins/google-analytics": "^6.4.0",
     "@aws-sdk/client-polly": "^3.352.0",
     "@capacitor/android": "5.0.4",
     "@capacitor/app": "5.0.2",
@@ -24,6 +26,9 @@
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
     "aws-sdk": "^2.1398.0",
+    "aws-serverless-express": "^3.4.0",
+    "cordova-plugin-camera": "^6.0.0",
+    "cordova-plugin-google-analytics": "^1.9.3",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "ionicons": "^7.0.0",

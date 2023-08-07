@@ -14,6 +14,7 @@ import {
   IonProgressBar,
 } from '@ionic/react';
 import { generateGptResponse } from '../api/gpt';
+import { Capacitor } from '@capacitor/core';
 import AWS from 'aws-sdk';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import './Home.css';
@@ -21,10 +22,10 @@ import './Home.css';
 import OutputPage from './OutputPage';
 
 const tourGuides = [
-  { name: 'Sabo', image: 'src/images/manTourGuide.jpg'},
-  { name: 'Alexa', image: 'src/images/womanTourGuide.jpg' },
-  { name: 'Justin', image: 'src/images/boyTourGuide.jpg' },
-  { name: 'Ivy', image: 'src/images/girlTourGuide.jpg' },
+  { name: 'Sabo', image: Capacitor.convertFileSrc('src/images/manTourGuide.jpg') },
+  { name: 'Alexa', image: Capacitor.convertFileSrc('src/images/womanTourGuide.jpg') },
+  { name: 'Justin', image: Capacitor.convertFileSrc('src/images/boyTourGuide.jpg') },
+  { name: 'Ivy', image: Capacitor.convertFileSrc('src/images/girlTourGuide.jpg') },
 ];
 
 const Home: React.FC = () => {
@@ -119,8 +120,9 @@ const Home: React.FC = () => {
       // Now that we have the GPT response, we can generate the audio file.
       if (gptResponse) {
         try {
-          const response = await fetch('http://localhost:8103/api/audio', {
+          const response = await fetch('https://6xodtaobpg.execute-api.us-east-1.amazonaws.com/v2/audio', {
             method: 'POST',
+            // mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json',
             },
@@ -164,7 +166,7 @@ const Home: React.FC = () => {
     </IonToolbar>
   </IonHeader>
   <IonContent className="ion-padding ion-text-center">
-    <div className="ion-text-center">
+    <div className="ion-text-center1">
       <select value={person} onChange={(e) => setPerson(e.target.value)}>
         <option value="">Age of listener?</option>
         <option value="Young boy">5-7</option>
@@ -177,34 +179,34 @@ const Home: React.FC = () => {
       {!isValidPerson && <p style={{ color: 'red' }}>This field is required</p>}
     </div>
     <p></p>
-    <div className="ion-text-center">
+    <div className="ion-text-center2">
       <PlacesAutocomplete
         value={location}
         onChange={handleLocationChange}
         onSelect={handleLocationSelect}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div className="ion-text-center">
+          <div className="ion-text-center3">
             <input {...getInputProps({ placeholder: "What place are you visiting?" })} />
-            <div className="ion-text-center">
+            <div className="ion-text-center4">
               {loading ? <div>Loading...</div> : null}
-              {suggestions.map((suggestion) => {
-                const style = suggestion.active
-                  ? { backgroundColor: "#fafafa", cursor: "pointer" }
-                  : { backgroundColor: "#ffffff", cursor: "pointer" };
-                return (
-                  <div {...getSuggestionItemProps(suggestion, { style })}>
-                    {suggestion.description}
-                  </div>
-                );
-              })}
+              {suggestions.map((suggestion, index) => {
+            const style = suggestion.active
+              ? { backgroundColor: "#fafafa", cursor: "pointer" }
+              : { backgroundColor: "#ffffff", cursor: "pointer" };
+            return (
+              <div key={index} {...getSuggestionItemProps(suggestion, { style })}>
+                {suggestion.description}
+              </div>
+            );
+          })}
             </div>
           </div>
         )}
       </PlacesAutocomplete>
       {!isValidLocation && <p style={{ color: 'red' }}>This field is required</p>}
     </div>
-    <div className="ion-text-center">
+    <div className="ion-text-center5">
       <h4>Who should be your tour guide?</h4>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
       {tourGuides.map((guide) => (
@@ -237,7 +239,7 @@ const Home: React.FC = () => {
       </div>
       {!isValidSpeaker && <p style={{ color: 'red' }}>This field is required</p>}
     </div>
-    <div className="ion-text-center">
+    <div className="ion-text-center6">
     <select
       value={lengthOf}
       onChange={(e) => setLengthOf(e.target.value)}
@@ -251,13 +253,13 @@ const Home: React.FC = () => {
       {!isValidLengthOf && <p style={{ color: 'red' }}>This field is required</p>}
     </div>
     <p></p>
-    <div className="ion-text-center">
+    <div className="ion-text-center7">
       <IonButton expand="block" onClick={handleGenerateGptAndAudioResponse}>
         Lets go!
       </IonButton>
     </div>
     {isLoading && (
-      <div className="ion-text-center">
+      <div className="ion-text-center8">
         <IonProgressBar type="indeterminate" />
       </div>
     )}

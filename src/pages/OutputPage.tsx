@@ -15,7 +15,7 @@ const OutputPage: React.FC<OutputPageProps> = ({ gptPrompt, gptResponse, audioFi
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleGoBack = () => {
-    history.goBack();
+    window.location.reload();
   };
 
   const handleAudioPlay = () => {
