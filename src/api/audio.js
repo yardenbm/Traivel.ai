@@ -6,11 +6,12 @@ const app = express();
 
 app.use(cors());
 
+AWS.config.update({region: 'us-east-1'});
 const Polly = new AWS.Polly();
 
 app.use(express.json());
 app.all('*', (req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://localhost:3000");
+    res.header("Access-Control-Allow-Origin", "*");
     next();
 });
 
