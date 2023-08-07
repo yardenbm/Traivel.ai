@@ -28,6 +28,7 @@ const tourGuides = [
   { name: 'Ivy', image: '/assets/images/girlTourGuide.jpg' },
 ];
 
+
 // Use the tourGuides array as needed in your application
 // For example, if you're rendering these images in a frontend framework or directly using JavaScript
 
