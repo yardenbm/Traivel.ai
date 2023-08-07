@@ -125,7 +125,7 @@ const Home: React.FC = () => {
       // Now that we have the GPT response, we can generate the audio file.
       if (gptResponse) {
         try {
-          const response = await fetch('https://6xodtaobpg.execute-api.us-east-1.amazonaws.com/v2/audio', {
+          const response = await fetch('https://6xodtaobpg.execute-api.us-east-1.amazonaws.com/v2/api/audio', {
             method: 'POST',
             // mode: 'no-cors',
             headers: {
