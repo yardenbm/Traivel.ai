@@ -22,10 +22,10 @@ import './Home.css';
 import OutputPage from './OutputPage';
 
 const tourGuides = [
-  { name: 'Sabo', image: Capacitor.convertFileSrc('src/images/manTourGuide.jpg') },
-  { name: 'Alexa', image: Capacitor.convertFileSrc('src/images/womanTourGuide.jpg') },
-  { name: 'Justin', image: Capacitor.convertFileSrc('src/images/boyTourGuide.jpg') },
-  { name: 'Ivy', image: Capacitor.convertFileSrc('src/images/girlTourGuide.jpg') },
+  { name: 'Sabo', image: Capacitor.convertFileSrc('assets/images/manTourGuide.jpg') },
+  { name: 'Alexa', image: Capacitor.convertFileSrc('assets/images/womanTourGuide.jpg') },
+  { name: 'Justin', image: Capacitor.convertFileSrc('assets/images/boyTourGuide.jpg') },
+  { name: 'Ivy', image: Capacitor.convertFileSrc('assets/images/girlTourGuide.jpg') },
 ];
 
 const Home: React.FC = () => {
@@ -195,7 +195,7 @@ const Home: React.FC = () => {
               ? { backgroundColor: "#fafafa", cursor: "pointer" }
               : { backgroundColor: "#ffffff", cursor: "pointer" };
             return (
-              <div key={index} {...getSuggestionItemProps(suggestion, { style })}>
+              <div {...getSuggestionItemProps(suggestion, { style })}>
                 {suggestion.description}
               </div>
             );
