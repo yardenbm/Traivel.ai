@@ -2,7 +2,7 @@
 import { Configuration, OpenAIApi } from 'openai';
 
 const organization = 'org-2CwskBzgGP5OnJE5rJP2GrIS';
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = process.env.OPENAI_AI_KEY;
 const configuration = new Configuration({
     organization,
     apiKey,
