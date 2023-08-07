@@ -22,11 +22,15 @@ import './Home.css';
 import OutputPage from './OutputPage';
 
 const tourGuides = [
-  { name: 'Sabo', image: Capacitor.convertFileSrc('assets/images/manTourGuide.jpg') },
-  { name: 'Alexa', image: Capacitor.convertFileSrc('assets/images/womanTourGuide.jpg') },
-  { name: 'Justin', image: Capacitor.convertFileSrc('assets/images/boyTourGuide.jpg') },
-  { name: 'Ivy', image: Capacitor.convertFileSrc('assets/images/girlTourGuide.jpg') },
+  { name: 'Sabo', image: 'assets/images/manTourGuide.jpg' },
+  { name: 'Alexa', image: 'assets/images/womanTourGuide.jpg' },
+  { name: 'Justin', image: 'assets/images/boyTourGuide.jpg' },
+  { name: 'Ivy', image: 'assets/images/girlTourGuide.jpg' },
 ];
+
+// Use the tourGuides array as needed in your application
+// For example, if you're rendering these images in a frontend framework or directly using JavaScript
+
 
 const Home: React.FC = () => {
   // State variables
