@@ -38,10 +38,10 @@ const OutputPage: React.FC<OutputPageProps> = ({ gptPrompt, gptResponse, audioFi
   };
 
   const tourGuidesVid = [
-    { name: 'Sabo', video: 'src/images/SaboVid.mp4'},
-    { name: 'Alexa', video: 'src/images/AlexaVid.mp4' },
-    { name: 'Justin', video: 'src/images/JustinVid.mp4' },
-    { name: 'Ivy', video: 'src/images/IvyVid.mp4' },
+    { name: 'Sabo', video: 'assets/images/SaboVid.mp4'},
+    { name: 'Alexa', video: 'assets/images/AlexaVid.mp4' },
+    { name: 'Justin', video: 'assets/images/JustinVid.mp4' },
+    { name: 'Ivy', video: 'assets/images/IvyVid.mp4' },
   ];
 
   const selectedGuide = tourGuidesVid.find(guide => guide.name === speakerName);
