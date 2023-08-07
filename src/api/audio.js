@@ -43,9 +43,14 @@ app.post('/api/audio', async (req, res) => {
         throw new Error('AudioStream is not an instance of Buffer.');
       }
     } catch (error) {
-      console.error('Failed to generate audio:', error.message, error.code, error.requestId);
-      res.status(500).send({ error: 'Failed to generate audio' });
-    }
+        console.error('Error Details:', {
+          message: error.message,
+          code: error.code,
+          requestId: error.requestId,
+          stack: error.stack
+        });
+        res.status(500).send({ error: 'Failed to generate audio' });
+      }
   });
 
 
