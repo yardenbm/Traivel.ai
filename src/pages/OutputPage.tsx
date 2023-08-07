@@ -70,8 +70,8 @@ const OutputPage: React.FC<OutputPageProps> = ({ gptPrompt, gptResponse, audioFi
                 <source src={audioFileUrl} type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
-              <h2 style={{textAlign: 'center', color: 'blue'}}>Here's what {speakerName} says about {placeName}:</h2>
-              <p style={{textAlign: 'center', lineHeight: '2'}}>{gptResponse}</p>
+              <h2 style={{textAlign: 'center', color: 'black'}}>Here's what {speakerName} says about {placeName}:</h2>
+              <p style={{textAlign: 'center', lineHeight: '2', color: 'black'}}>{gptResponse}</p>
               <div style={{display: 'flex', justifyContent: 'center'}}>
                 <IonButton expand="block" onClick={handleGoBack}>
                   Go Back

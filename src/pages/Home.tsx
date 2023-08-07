@@ -184,7 +184,9 @@ const Home: React.FC = () => {
       {!isValidPerson && <p style={{ color: 'red' }}>This field is required</p>}
     </div>
     <p></p>
-    <div className="ion-text-center2" style={{color: 'black'}}>
+    <div className="ion-text-center2" style={{color: 'black',
+              backgroundColor: 'white', 
+}}>
       <PlacesAutocomplete
         value={location}
         onChange={handleLocationChange}
@@ -193,7 +195,7 @@ const Home: React.FC = () => {
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div className="ion-text-center3">
             <input {...getInputProps({ placeholder: "What place are you visiting?" })} />
-            <div className="ion-text-center4">
+            <div className="ion-text-center4" style={{color: 'black'}}>
               {loading ? <div>Loading...</div> : null}
               {suggestions.map((suggestion, index) => {
             const style = suggestion.active
