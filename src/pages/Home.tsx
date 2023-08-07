@@ -22,10 +22,10 @@ import './Home.css';
 import OutputPage from './OutputPage';
 
 const tourGuides = [
-  { name: 'Sabo', image: 'assets/images/manTourGuide.jpg' },
-  { name: 'Alexa', image: 'assets/images/womanTourGuide.jpg' },
-  { name: 'Justin', image: 'assets/images/boyTourGuide.jpg' },
-  { name: 'Ivy', image: 'assets/images/girlTourGuide.jpg' },
+  { name: 'Sabo', image: '../../assets/images/manTourGuide.jpg' },
+  { name: 'Alexa', image: '../../assets/images/womanTourGuide.jpg' },
+  { name: 'Justin', image: '../../assets/images/boyTourGuide.jpg' },
+  { name: 'Ivy', image: '../../assets/images/girlTourGuide.jpg' },
 ];
 
 // Use the tourGuides array as needed in your application
