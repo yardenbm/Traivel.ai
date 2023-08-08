@@ -40,7 +40,7 @@ const OutputPage: React.FC<OutputPageProps> = ({ gptPrompt, gptResponse, audioFi
   const tourGuidesVid = [
     { name: 'Sabo', video: '/assets/images/SaboVid.mp4'},
     { name: 'Alexa', video: '/assets/images/AlexaVid.mp4' },
-    { name: 'Justin', video: '/assets/images/JustinVid.mp4' },
+    { name: 'Justin', video: '/assets/images/justinVid.mp4' },
     { name: 'Ivy', video: '/assets/images/IvyVid.mp4' },
   ];
 
