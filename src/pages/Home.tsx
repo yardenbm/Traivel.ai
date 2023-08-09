@@ -130,6 +130,7 @@ const Home: React.FC = () => {
             // mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json',
+              'authorizationToken': 'allow'
             },
             body: JSON.stringify({ text: gptResponse, speaker }),
           });
