@@ -129,8 +129,7 @@ const Home: React.FC = () => {
             method: 'POST',
             // mode: 'no-cors',
             headers: {
-              'Content-Type': 'application/json',
-              'authorizationToken': 'allow'
+              'Content-Type': 'application/json'
             },
             body: JSON.stringify({ text: gptResponse, speaker }),
           });
