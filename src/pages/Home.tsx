@@ -127,7 +127,6 @@ const Home: React.FC = () => {
         try {
           const response = await fetch('https://6xodtaobpg.execute-api.us-east-1.amazonaws.com/v2/api/audio', {
             method: 'POST',
-            // mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json',
               'X-Api-Key': 'OHJYneodYr1eENBPvkQ3V6ojUiJjV8oq2ZTg1mwM'
